@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="./css/Easy.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <title>New Game</title>
+</head>
+
+<body id="gameBody">
+
+    <!--დრო ქულა ტური -->
+    <div id="score"></div>
+    <div id="level"></div>
+    <div id="timer"></div>
+    <div id="height"></div>
+    <button id="back">Back</button>
+    <div id="rainbow"></div>
+
+    <!--საცდელი divს-->
+    <button id="resgame">Resume</button>
+    <button id="pausgame">Pause</button>
+
+    <!--ღრუბლები    -->
+    <div id="cloud1"></div>
+    <div id="cloud2"></div>
+    <div id="cloud3"></div>
+    <div id="cloud4"></div>
+
+    <!--არჩევა მარჯვნიდან და ამრცხნიდან ანიმაციისთვის-->
+    <div id="chooseLeft"></div>
+    <div id="chooseRight"></div>
+    <!--მენიუ-->
+    <div id="meniu">
+        <div id="play">play</div>
+        <div id="help">Help</div>
+        <div id="exit">Exit</div>
+    </div>
+
+    <!--help-ტექსტი-->
+    <p id="helping">Match colors from</p>
+    <p id="same">left to right Side</p>
+
+    <!--ტურების მენიუ-->
+    <div id="lvl-meniu">
+        <p id="1lvl">level 1</p>
+        <p id="5lvl">Level 5</p>
+        <p id="10lvl">Level 10</p>
+        <p id="20lvl">Level 20</p>
+        <p id="30lvl">level 30</p>
+        <p id="40lvl">level 40</p>
+    </div>
+    <canvas></canvas>
+    <!--ბურთები მარცხნიდან-->
+    <div id="insideGame">
+        <div id="left">
+            <div id="ballleft1"></div>
+            <div id="ballleft2"></div>
+            <div id="ballleft3"></div>
+            <div id="ballleft4"></div>
+            <div id="ballleft5"></div>
+        </div>
+        <!--ბურთები მარჯვნიდან-->
+        <div id="right">
+            <div id="ballright1"></div>
+            <div id="ballright2"></div>
+            <div id="ballright3"></div>
+            <div id="ballright4"></div>
+            <div id="ballright5"></div>
+        </div>
+    </div>
+    <!--თამაშის დასრულება-->
+    <div id="endScreen">
+        <h1 id="hgame">Game over</h1>
+        <button id="restart">Restart</button>
+        <p id="adText">contain Ads</p>
+        <p id="lvlText"></p>
+        <!--რეკლამისთვის-->
+        <button id="reward">continue</button>
+    </div>
+    <!--თამაშის დაწყება-->
+    <div id="startPlay">start</div>
+    <!--თამაშიდან გამოსვლა-->
+    <div id="quit">Exit</div>
+    <!--ხმები-->
+    <div id="soundon"></div>
+    <div id="soundoff"></div>
+
+    <!--background-ფერები-->
+    <div id="sacdeli1"></div>
+
+    <div id="sun">
+        <div id="ray_box">
+            <div class="ray ray1"></div>
+            <div class="ray ray2"></div>
+            <div class="ray ray3"></div>
+            <div class="ray ray4"></div>
+            <div class="ray ray5"></div>
+            <div class="ray ray6"></div>
+            <div class="ray ray7"></div>
+            <div class="ray ray8"></div>
+            <div class="ray ray9"></div>
+            <div class="ray ray11"></div>
+            <div class="ray ray12"></div>
+            <div class="ray ray13"></div>
+            <div class="ray ray14"></div>
+            <div class="ray ray15"></div>
+            <div class="ray ray16"></div>
+            <div class="ray ray17"></div>
+            <div class="ray ray18"></div>
+            <div class="ray ray19"></div>
+            <div class="ray ray21"></div>
+            <div class="ray ray22"></div>
+            <div class="ray ray23"></div>
+            <div class="ray ray24"></div>
+            <div class="ray ray25"></div>
+            <div class="ray ray26"></div>
+            <div class="ray ray27"></div>
+            <div class="ray ray28"></div>
+
+        </div>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="./js/Easy.js"></script>
+</body>
+
+</html>

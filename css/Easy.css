@@ -1,0 +1,1283 @@
+
+* {
+    margin:0px;
+    padding:0px;   
+} 
+
+body { 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:25px;    
+    text-transform:uppercase;  
+    letter-spacing: 3px; 
+    width: 100%;
+    height: 100%;
+    /* background-color: black;*/
+   background-color: rgb(135,206,250); 
+    overflow: hidden;   
+    position: fixed;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    }
+  
+canvas {
+ display: block;
+ position: absolute
+
+}
+
+#resgame {
+  position: absolute;
+  bottom: 9%;
+  right: 3%;
+  width: 150px;
+  display: none;
+  z-index: 1;
+ 
+}
+#pausgame {
+  position: absolute;
+  bottom: 9%;
+  left: 3%;
+  width: 150px;
+  display: none;
+  z-index: 1;
+}
+/*ღრუბლები  font-family: 'Segoe UI',  sans-serif;     */
+
+#hideScreen{
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: none;
+}
+#cloud1 {
+  width: 250px;
+  height: 150px;
+  position: relative;
+  top: 25%; 
+  background-image: url("../img/cl1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -100;
+  animation: cloud1 45s infinite;
+  opacity: 1;
+  display: block;
+}
+
+#cloud2{
+  width: 550px;
+  height: 250px;
+  position: relative;
+  top: 35%;
+  background-image: url("../img/cl2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -100;
+  opacity: 1;
+  animation: cloud2 40s infinite;
+  display: block;
+}
+
+
+#cloud3{
+  width: 250px;
+  height: 150px;
+  position: absolute;
+  top: 0%;
+  background-image: url("../img/cl3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -100;
+  opacity: 1;
+  animation: cloud2 55s infinite;
+  display: block;
+
+}
+
+#cloud4{
+  width: 250px;
+  height: 150px;
+  position: absolute;
+  top: 15%;
+  background-image: url("../img/cl7.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -100;
+  opacity: 1;
+  animation: cloud2 40s infinite;
+  display: block;
+
+}
+/*ხმები  background-image: url("/www/img/soundon.PNG"); */
+
+#soundon{
+  background-image: url("../img/sndon.png");
+  width: 45px;
+  height: 45px;
+  top: 1%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: invert(48%) sepia(13%) saturate(33337%) hue-rotate(130deg) brightness(50%) contrast(100%);
+  display: none;
+  z-index: -100;
+  opacity: 1;
+}
+
+#soundoff {
+background-image: url("../img/soundoff.png");
+  width: 45px;
+  height: 45px;
+  top: 1%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: invert(48%) sepia(13%) saturate(33337%) hue-rotate(0deg) brightness(50%) contrast(100%);
+  display: none;
+  z-index: -100;
+  opacity: 1;
+ 
+}
+
+
+
+
+@keyframes cloud2 {
+  0%{left: -100%; }
+  30% {transform: scale(1.2);}
+  100%{left: 100%;}
+} 
+@keyframes cloud1 {
+  0%{left: -100%;  }
+  30% {transform: scale(1.5);}
+  100%{left: 100%;}
+} 
+
+
+ #left {
+   display: none;
+ }
+ #right {
+   display: none;
+ }
+#ballleft1 {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 60px;
+    height: 60px;  
+    border-radius: 100%;   
+    box-shadow: 1px 3px 3px rgb(22, 7, 7);   
+ 
+ }
+
+#ballleft2 {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 60px;
+    height: 60px;  
+    border-radius: 100%;
+    box-shadow: 1px 3px 3px rgb(22, 7, 7);
+   
+  
+}
+#ballleft3 {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 60px;
+    height: 60px;  
+    border-radius: 100%;  
+    box-shadow: 1px 3px 3px rgb(22, 7, 7);
+       
+}
+
+#ballleft4 {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    width: 60px;
+    height: 60px;  
+    border-radius: 100%;  
+    box-shadow: 1px 3px 3px rgb(22, 7, 7);
+ 
+   
+}
+
+#ballleft5 {
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    width: 60px;
+    height: 60px;  
+    border-radius: 100%;
+    box-shadow: 1px 3px 3px rgb(22, 7, 7);
+    
+}
+
+/*ბურთები მარჯვნივ */
+
+#ballright1 {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    width: 60px;
+    height: 60px;  
+    border-radius: 100%;     
+    box-shadow: 1px 3px 3px rgb(22, 7, 7);
+  
+   
+}
+
+#ballright2 {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    width: 60px;
+    height: 60px;  
+    border-radius: 100%;    
+    box-shadow: 1px 3px 3px rgb(22, 7, 7);
+  
+}
+
+#ballright3 {
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    width: 60px;
+    height: 60px;  
+    border-radius: 100%;
+    
+    box-shadow: 1px 3px 3px rgb(22, 7, 7);
+}
+
+#ballright4 {
+    position: absolute;
+    top: 60%;
+    right: 5%;
+    width: 60px;
+    height: 60px;  
+    border-radius: 100%;
+    box-shadow: 1px 3px 3px rgb(22, 7, 7);
+}
+
+#ballright5 {
+    position: absolute;
+    top: 75%;
+    right: 5%;
+    width: 60px;
+    height: 60px;  
+    border-radius: 100%;
+    /*border: 3px solid black; */
+    box-shadow: 1px 3px 3px rgb(22, 7, 7);
+}
+
+
+/*  ქულა */
+#score {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    color: black;
+    position: absolute;
+    box-shadow: 1px 3px 3px rgb(22, 7, 7);  
+    font-weight: bolder;
+    font-style: oblique 12deg;
+    z-index: 100; 
+    display: none;
+}
+
+
+/*ტური*/
+#level {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+   /* box-shadow: 1px 3px 3px rgb(22, 7, 7); */
+    text-align: center;
+    color: black;
+    right: 0%;
+    top: 0%;
+    font-weight: bolder;
+    font-style: oblique 12deg;
+    z-index: 100; 
+    display: none;
+   color: green;
+}
+
+/*დრო  და ანიმაცია */
+#timer {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    color: black;
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+    letter-spacing: 5px;
+     z-index: 100;
+     text-align: center;
+     font-style: italic;
+     font-weight: bold;
+    /* box-shadow: 0px 3px 10px rgb(22, 7, 7); */
+     display: none;
+}
+
+@keyframes timerAnim{
+
+  50%  {transform: scale(1.5); color: red;}  
+
+}
+
+#next{
+    position: absolute;
+    top: 60%;
+    width: 150px;
+    left: 32%;
+    height: 50px;
+    font-size: 25px;
+    background-color: red;
+    border-radius: 45%;
+    letter-spacing: 5px;
+  }
+
+
+
+/*ანიმაცია ბურთის არჩევისას */
+  @keyframes cimcimi {
+    0%   {width: 50px; height: 50px;}
+    10%   {width: 54px; height: 54px;}
+    20%   {width: 58px; height: 58px;}
+    30%  {width: 62px; height: 62px;}
+    40%  {width: 66px; height: 66px;}
+    50%  {width: 70px; height: 70px;}
+    60%  {width: 66px; height: 66px;} 
+    70% {width: 62px; height: 62px;}
+    80% {width: 58px; height: 58px;}
+    90% {width: 54px; height: 54px;}
+    100% {width: 50px; height: 50px;}
+  }
+
+  @keyframes cimcimires {
+    0%   {width: 40px; height: 40px;}
+    10%   {width: 42px; height: 42px;}
+    20%   {width: 44px; height: 44px;}
+    30%  {width: 46px; height: 46px;}
+    40%  {width: 48px; height: 48px;}
+    50%  {width: 50px; height: 50px;}
+    60%  {width: 48px; height: 48px;} 
+    70% {width: 46px; height: 46px;}
+    80% {width: 44px; height: 44px;}
+    90% {width: 42px; height: 42px;}
+    100% {width: 40px; height: 40px;}
+  }
+
+  @keyframes cimcimires1 {
+    0%   {width: 30px; height: 30px;}
+    10%   {width: 32px; height: 32px;}
+    20%   {width: 34px; height: 34px;}
+    30%  {width: 36px; height: 36px;}
+    40%  {width: 38px; height: 38px;}
+    50%  {width: 40px; height: 40px;}
+    60%  {width: 38px; height: 38px;} 
+    70% {width: 36px; height: 36px;}
+    80% {width: 34px; height: 34px;}
+    90% {width: 32px; height: 32px;}
+    100% {width: 30px; height: 30px;}
+  }
+
+ .animationstr {
+ animation: cimcimi 0.7s infinite; 
+}
+
+.animationstr1{
+  animation: cimcimires 0.7s infinite;
+}
+
+.animationstr2 {
+  animation: cimcimires1 0.7s infinite;
+}
+  /*გასაქრობად მომზადება და ანიმაციები*/
+  /*მარცხენა ბურთების ანიმაცია */
+  @keyframes marcxenaModzraoba1 {
+    0%    {left: 5%; top: 15%;}
+    25%   {left: 45%; top:15%;}
+    50%   {left: 45%; top: 90%;opacity: 0.7;} 
+    75%   {left: 50%; top:90%; opacity: 0.5;}
+    100%   {left: 50%; top:90%; opacity: 0;}  
+  }
+
+
+  @keyframes marcxenaModzraoba2 {
+    0%    {left: 5%; top: 30%;}
+    25%   {left: 45%; top:30%;}
+    50%   {left: 45%; top:90%;opacity: 0.7;} 
+    75%   {left: 50%; top:90%; opacity: 0.5;}
+    100%   {left: 50%;top:90%; opacity: 0;} 
+  }
+  @keyframes marcxenaModzraoba3 {
+    0%    {left: 5%; top: 45%;}
+    25%   {left: 45%; top:45%;}
+    50%   {left: 45%; top:90%;opacity: 0.7;} 
+    75%   {left: 50%; top:90%; opacity: 0.5;}
+    100%   {left: 50%;top:90%; opacity: 0;} 
+  }
+  @keyframes marcxenaModzraoba4 {
+    0%    {left: 5%; top: 60%;}
+    25%   {left: 45%; top:60%;}
+    50%   {left: 45%; top:90%;opacity: 0.7;} 
+    75%   {left: 50%; top:90%; opacity: 0.5;}
+    100%   {left: 50%;top:90%; opacity: 0;} 
+  }
+
+  @keyframes marcxenaModzraoba5 {
+    0%    {left: 5%; top: 75%;}
+    25%   {left: 45%; top:75%;}
+    50%   {left: 45%; top:90%;opacity: 0.7;} 
+    75%   {left: 50%; top:90%; opacity: 0.5;}
+    100%   {left: 50%;top:90%; opacity: 0;} 
+  }
+
+
+  /*ტურში გადასვლის ანიმაცია */
+
+  /*ტურში გადასვლისას უკან მოძრაობა მარცხენა ბურთები */
+  @keyframes ukanmarcxena1 {
+    0%    {left: 50%; top: 90%; opacity: 1;}
+    25%   {left: 45%; top:90%; opacity: 0.7;}
+    50%   {left: 45%; top: 15%;opacity: 0.5;} 
+    75%   {left: 5%; top:15%; opacity: 0.2;}
+    100%  {left: 5%; top:15%; opacity: 1;}  
+  }
+  
+  @keyframes ukanmarcxena2 {
+    0%    {left: 50%; top: 90%; opacity: 1;}
+    25%   {left: 45%; top:90%; opacity: 0.7;}
+    50%   {left: 45%; top: 30%;opacity: 0.5;} 
+    75%   {left: 5%;  top:30%; opacity: 0.2;}
+    100%  {left: 5%;  top:30%; opacity: 1;}  
+  }
+  
+  
+  @keyframes ukanmarcxena3 {
+    0%    {left: 50%; top: 90%; opacity: 1;}
+    25%   {left: 45%; top:90%; opacity: 0.7;}
+    50%   {left: 45%; top: 45%;opacity: 0.5;} 
+    75%   {left: 5%; top:45%; opacity: 0.2;}
+    100%  {left: 5%; top:45%; opacity: 1;}  
+  }
+  
+  
+  @keyframes ukanmarcxena4 {
+    0%    {left: 50%; top: 90%; opacity: 1;}
+    25%   {left: 45%; top:90%; opacity: 0.7;}
+    50%   {left: 45%; top: 60%;opacity: 0.5;} 
+    75%   {left: 5%; top:60%; opacity: 0.2;}
+    100%  {left: 5%; top:60%; opacity: 1;}  
+  }
+  
+  @keyframes ukanmarcxena5 {
+    0%    {left: 50%; top: 90%; opacity: 1;}
+    25%   {left: 45%; top:90%; opacity: 0.7;}
+    50%   {left: 45%; top: 75%;opacity: 0.5;} 
+    75%   {left: 5%; top:75%; opacity: 0.2;}
+    100%  {left: 5%; top:75%; opacity: 1;}  
+  }
+  
+.ukumarcxena1{
+  animation:ukanmarcxena1 1.2s forwards;
+}
+
+.ukumarcxena2{
+  animation:ukanmarcxena2 1.5s forwards;
+}
+
+.ukumarcxena3 {
+  animation:ukanmarcxena3 1s forwards;
+}
+
+.ukumarcxena4{
+  animation:ukanmarcxena4 0.8s forwards;
+}
+.ukumarcxena5{
+  animation:ukanmarcxena5 0.5s forwards;
+}
+
+
+  /*მარჯვენა ბურთების ანიმაცია */
+  @keyframes marjvenaModzraoba1 {
+    0%    {right: 5%; top: 15%;}
+    25%   {right: 45%; top:15%;}
+    50%   {right: 45%; top:90%;opacity: 0.7;} 
+    75%   {right: 50%; top:90%; opacity: 0.5;}
+    100%  {right: 50%; top:90%; opacity: 0;} 
+  }
+
+  @keyframes marjvenaModzraoba2 {
+    0%    {right: 5%; top: 30%;}
+    25%   {right: 45%; top:30%;}
+    50%   {right: 45%; top:90%;opacity: 0.7;} 
+    75%   {right: 50%; top:90%; opacity: 0.5;}
+    100%  {right: 50%; top:90%; opacity: 0;} 
+  }
+
+  @keyframes marjvenaModzraoba3 {
+    0%    {right: 5%; top: 45%;}
+    25%   {right: 45%; top:45%;}
+    50%   {right: 45%; top:90%;opacity: 0.7;} 
+    75%   {right: 50%; top:90%; opacity: 0.5;}
+    100%  {right: 50%; top:90%; opacity: 0;} 
+  }
+
+
+  @keyframes marjvenaModzraoba4 {
+    0%    {right: 5%; top: 60%;}
+    25%   {right: 45%; top:60%;}
+    50%   {right: 45%; top:90%;opacity: 0.7;} 
+    75%   {right: 50%; top:90%; opacity: 0.5;}
+    100%  {right: 50%; top:90%; opacity: 0;} 
+  }
+
+  @keyframes marjvenaModzraoba5 {
+    0%    {right: 5%; top: 75%;}
+    25%   {right: 45%; top:75%;}
+    50%   {right: 45%; top:90%;opacity: 0.7;} 
+    75%   {right: 50%; top:90%; opacity: 0.5;}
+    100%  {right: 50%; top:90%; opacity: 0;} 
+  }
+
+
+  /*ტურში გადასვლის ანიმაცია */
+
+  /*ტურში გადასვლისას უკან მოძრაობა მარჯვენა ბურთები */
+  @keyframes ukanmarjvena1 {
+    0%    {right: 50%; top: 90%; opacity: 1;}
+    25%   {right: 45%; top:90%; opacity: 0.7;}
+    50%   {right: 45%; top: 15%;opacity: 0.5;} 
+    75%   {right: 5%; top:15%; opacity: 0.2;}
+    100%  {right: 5%; top:15%; opacity: 1;}  
+  }
+
+  @keyframes ukanmarjvena2 {
+    0%    {right: 50%; top: 90%; opacity: 1;}
+    25%   {right: 45%; top:90%; opacity: 0.7;}
+    50%   {right: 45%; top: 30%;opacity: 0.5;} 
+    75%   {right: 5%; top:30%; opacity: 0.2;}
+    100%  {right: 5%; top:30%; opacity: 1;}  
+  }
+
+  @keyframes ukanmarjvena3 {
+    0%    {right: 50%; top: 90%; opacity: 1;}
+    25%   {right: 45%; top:90%; opacity: 0.7;}
+    50%   {right: 45%; top: 45%;opacity: 0.5;} 
+    75%   {right: 5%; top:45%; opacity: 0.2;}
+    100%  {right: 5%; top:45%; opacity: 1;}  
+  }
+
+  @keyframes ukanmarjvena4 {
+    0%    {right: 50%; top: 90%; opacity: 1;}
+    25%   {right: 45%; top:90%; opacity: 0.7;}
+    50%   {right: 45%; top: 60%;opacity: 0.5;} 
+    75%   {right: 5%; top:60%; opacity: 0.2;}
+    100%  {right: 5%; top:60%; opacity: 1;}  
+  }
+
+  @keyframes ukanmarjvena5 {
+    0%    {right: 50%; top: 90%; opacity: 1;}
+    25%   {right: 45%; top:90%; opacity: 0.7;}
+    50%   {right: 45%; top: 75%;opacity: 0.5;} 
+    75%   {right: 5%; top:75%; opacity: 0.2;}
+    100%  {right: 5%; top:75%; opacity: 1;}  
+  }
+
+
+  .ukumarjvena1{  
+    animation:ukanmarjvena1 1.2s forwards;
+  }
+
+  .ukumarjvena2{
+    animation:ukanmarjvena2 1.5s forwards;
+  }
+  .ukumarjvena3{
+    animation:ukanmarjvena3 1s forwards;
+  }
+  .ukumarjvena4{
+    animation:ukanmarjvena4 0.8s forwards;
+  }
+
+  .ukumarjvena5 {
+    animation:ukanmarjvena5 0.5s forwards;
+  }
+
+@keyframes meniuback{
+  0%{left: 0%;}
+  25%{right: 30%;}
+  50%{right: 40%;}
+  75%{right: 50%;}
+  100%{ left: -80%;}
+}
+
+/*ტურების მენიუ */
+#lvl-meniu {
+position: absolute; 
+  width: 100%;
+  line-height: 70px;
+  display: none;
+  text-shadow: 1px 1px 1px black;
+  opacity: 1;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 5px;
+ 
+}
+
+
+/*თამაშის დაწყება */
+
+#startPlay {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  font-size: 45px;
+  letter-spacing: 15px;
+  box-shadow: 0px 0px 10px black;
+  text-shadow: 1px 1px 1px black;
+  color: orange;
+  text-align: center;
+  font-style: italic;
+  font-weight: bolder;
+  display: none;
+ 
+}
+#meniu {
+  position: absolute;
+  font-size: 45px;
+  letter-spacing: 7px;
+  color: white;
+  text-align: center;
+  top: 20%;
+  width: 100%;
+  align-items: center;
+  /*height: 100%; */
+  line-height: 17vh;
+  z-index: 100;
+  /*animation:opasityAnime 2.5s forwards; */
+  font-weight: bolder;
+  font-style: italic;
+  box-sizing: border-box;
+  display: block;
+}
+
+#play {
+ /*animation:opasityAnime 2.5s forwards;   rgb(22, 7, 7)*/ 
+
+   text-shadow: 1px 3px 3px rgb(22, 7, 7);
+  color: green;
+
+}
+#help { 
+ 
+   text-shadow: 1px 3px 3px rgb(22, 7, 7);
+   color: yellow;  
+  
+}
+ /* box-shadow: 0px 0px 100px 10px black; 
+  box-shadow: 0px 0px 100px 10px blue;
+  box-shadow: 0px 0px 100px 10px orange;
+  ეს ესევე რო ჩავსვა start help exit გამოდის რაღაც ვიზუალი
+ */
+#exit {
+
+  color: black;
+  text-shadow: 1px 3px 3px rgb(22, 7, 7); 
+ /* animation:opasityAnime 2.5s forwards; */
+  /*animation: fadeIn2 20s infinite,opasityAnime 2.5s forwards; */
+}
+/*
+#sacdeli1{
+  top: -15%;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  box-shadow: 300px 100px 80px 20px orange;
+  z-index: -10000;
+}
+
+ animation: ray_anim 5s  infinite;
+*/
+#sun { 
+  position: absolute;
+	top:-3%;
+  right: -4%;
+	margin: auto;  
+	width:70px;
+	height:70px;
+	border-radius:50%;	
+	background:orange;
+	opacity:0.9;			
+	box-shadow: 0px 0px 40px 15px orange;
+  z-index: -1100;
+  animation: ray_anim 75s  infinite,sunrais 3s forwards; 
+  display: none;
+}
+
+@keyframes sunrais {
+  0%{top: -30%; right: -30%;}
+  100%{top: -3%;right: -4%;}
+}
+
+#ray_box {
+  position: absolute;
+  margin: auto;
+	top:0px;
+	left:0;
+	right:0;
+	bottom:0;	
+  width:70px;  
+ 
+}
+.ray {  
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); 
+    margin-left:10px;
+    position:absolute;
+    opacity:0.1;
+
+}
+
+.ray1 {    
+    height:500%;
+    width:8px;
+    transform: rotate(175deg);
+    top:40px;
+    left: 50px;
+    border-radius:80% 80% 0 0;
+}
+
+.ray2 {
+    height:150px;
+    width:8px;   
+    top:60px;
+    transform: rotate(12deg);
+    left: 5px;
+    border-radius:0% 0% 80% 80%;
+}
+
+.ray3 {
+    height:170px;
+    width:10px;
+    transform: rotate(25deg);
+    top:60px;
+    left: -30px;
+    border-radius:0% 0% 80% 80%;
+}
+
+.ray4 {
+    height:150px;
+    width:10px;
+    transform: rotate(40deg);
+    top:30px;
+    left: -50px;
+    border-radius:0% 0% 80% 80%;
+   
+}
+
+
+.ray5 {
+    height:140px;
+    width:8px;
+    transform: rotate(60deg);
+    top:0px;
+    left: -75px;
+    border-radius:0% 0% 80% 80%;
+}
+
+
+.ray6 {
+    height:190px;
+    width:8px;
+    transform: rotate(255deg);
+    top:-50px;
+    left: -100px;
+    border-radius:80% 80% 0% 0%;
+}
+
+.ray7 {
+    height:280px;
+    width:8px;
+    transform: rotate(265deg);
+    top: -110px;;
+    left: -150px;
+    border-radius:80% 80% 0% 0%;
+}
+
+.ray8 {
+    height:200px;
+    width:8px;
+    transform: rotate(230deg);
+    top:10px;
+    left:-90px;
+    border-radius:80% 80% 0% 0%;
+}
+
+.ray9 {
+    height:300px;
+    width:8px;
+    transform: rotate(210deg);
+    top:45px;
+    left:-80px;
+    border-radius:80% 80% 0% 0%;
+}
+
+.ray10 {
+  height:300px;
+  width:8px;   
+  top:60px;
+  transform: rotate(8deg);
+  left: 8px;
+  border-radius:0% 0% 80% 80%;
+}
+
+.ray11 {    
+  height:250px;
+  width:8px;   
+  top:-140px;
+  transform: rotate(105deg);
+  left: -120px;
+  border-radius:0% 0% 80% 80%;
+}
+
+.ray12 {
+  height:200px;
+  width:8px;   
+  top:-140px;
+  transform: rotate(120deg);
+  left: -80px;
+  border-radius:0% 0% 80% 80%;
+}
+
+.ray13 {
+  height:250px;
+  width:8px;   
+  top:-210px;
+  transform: rotate(135deg);
+  left: -60px;
+  border-radius:0% 0% 80% 80%;
+}
+
+.ray14 {
+  height:170px;
+  width:10px;   
+  top:-160px;
+  transform: rotate(155deg);
+  left: -10px;
+  border-radius:80% 80% 80% 80%;
+ 
+}
+
+
+.ray15 {
+  height:220px;
+  width:10px;   
+  top:-210px;
+  transform: rotate(170deg);
+  left: 10px;
+  border-radius:80% 80% 80% 80%;
+}
+
+
+.ray16 {
+  height:250px;
+  width:8px;   
+  top:-250px;
+  transform: rotate(185deg);
+  left: 45px;
+  border-radius:80% 80% 80% 80%;
+}
+
+.ray17 {
+  height:150px;
+  width:10px;   
+  top:-130px;
+  transform: rotate(195deg);
+  left: 55px;
+  border-radius:80% 80% 80% 80%;
+}
+
+.ray18 {
+  height:300px;
+  width:10px;   
+  top:-255px;
+  transform: rotate(210deg);
+  left: 105px;
+  border-radius:80% 80% 80% 80%;
+}
+
+.ray19 {
+  height:200px;
+  width:10px;   
+  top:-140px;
+  transform: rotate(230deg);
+  left: 120px;
+  border-radius:80% 80% 80% 80%;
+}
+
+.ray20 {
+  height:300px;
+  width:10px;   
+  top:-160px;
+  transform: rotate(250deg);
+  left: 180px;
+  border-radius:80% 80% 80% 80%;
+}
+
+.ray21 {
+  height:300px;
+  width:10px;   
+  top:-190px;
+  transform: rotate(242deg);
+  left: 180px;
+  border-radius:80% 80% 80% 80%;
+}
+
+.ray22 {
+  height:200px;
+  width:10px;   
+  top:-55px;
+  transform: rotate(270deg);
+  left: 150px;
+  border-radius:80% 80% 80% 80%;
+}
+.ray23 {
+  height:150px;
+  width:12px;   
+  top:-5px;
+  transform: rotate(280deg);
+  left: 120px;
+  border-radius:80% 80% 80% 80%;
+}
+.ray24 {
+  height:280px;
+  width:8px;   
+  top:-38px;
+  transform: rotate(290deg);
+  left: 160px;
+  border-radius:80% 80% 80% 80%;
+}
+.ray25 {
+  height:200px;
+  width:8px;   
+  top:10px;
+  transform: rotate(300deg);
+  left: 120px;
+  border-radius:80% 80% 80% 80%;
+}
+.ray26 {
+  height:200px;
+  width:8px;   
+  top:20px;
+  transform: rotate(315deg);
+  left: 100px;
+  border-radius:80% 80% 80% 80%;
+}
+
+.ray27 {
+  height:200px;
+  width:8px;   
+  top:40px;
+  transform: rotate(330deg);
+  left: 80px;
+  border-radius:80% 80% 80% 80%;
+}
+
+
+
+
+@keyframes ray_anim {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }    
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);} 
+}
+
+
+
+#quit{
+  position: absolute;
+  font-size: 45px;
+  letter-spacing: 7px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  color: red;
+  text-shadow: 1px 3px 3px rgb(22, 7, 7);
+  font-weight: bolder;
+  font-style: italic;
+  display: none;
+  bottom: 0%;
+
+}
+
+
+#helping {
+  position: absolute;
+  display: none;
+  top: 10%;
+  font-size: 20px;
+  letter-spacing: 5px;
+  width: 100%;
+  font-weight: bolder;
+  text-align: center;
+  color: brown;
+  font-style: inherit;
+}
+
+#same {
+  position: absolute;
+  display: none;
+  top: 40%;
+  font-size: 20px;
+  letter-spacing: 5px;
+  width: 100%;
+  font-weight: bolder;
+  text-align: center;
+  color: rgb(30, 255, 0);
+ font-weight: bolder;
+ text-shadow: 1px 2px 2px rgb(22, 7, 7);
+ font-style: italic;  
+}
+
+
+#chooseLeft {
+  position: absolute;
+  background-color: red;
+  width: 60px;
+  height: 70%;
+  opacity: 0.5;
+  top: 15%;
+  left: 5%;
+  border: 1px solid black;
+  border-radius: 12%;
+  display: none;
+ 
+}
+
+#chooseRight {
+  position: absolute;
+  background-color: green;
+  width: 60px;
+  height: 70%;
+  opacity: 0.5;
+  top: 15%;
+  right: 5%;
+  border: 1px solid black;
+  border-radius: 12%;
+  display: none;
+}
+
+#back {
+ position: absolute;
+ display: none;
+ bottom: 3%;
+ border-radius: 30%;
+ font-size: 30px;
+ letter-spacing: 10px;
+ width: 100%;
+ z-index: 100;
+ font-weight: bolder;
+
+}
+
+
+@keyframes choose1 {
+  0% {height: 0%; }   
+  50% {height: 72%;}
+  100% {height: 0%;}
+
+}
+
+
+#option { 
+  position: absolute;
+  display: none; 
+}
+
+
+@keyframes fadeIn2{
+  0%{color: white; opacity: 0;  letter-spacing: 0px;}
+  25% {color:blue;opacity: 2;  letter-spacing: 4px;}     
+  50% {color: orange;opacity: 3;  letter-spacing: 8px; transform: rotate(3600deg);}
+  75% {color: red; opacity: 4;  letter-spacing: 12px;}
+  100% {color: green; opacity: 5;  letter-spacing: 12px;  /*height: 50px; */}
+}
+
+@keyframes text-shadow { 
+  0% {box-shadow: 0px 0px 0px rgb(22, 7, 7);}     
+  25% {box-shadow: -3px -3px 3px rgb(22, 7, 7);    text-shadow: 1px 3px 3px black;}      
+  50% {box-shadow: 3px 3px 3px rgb(22, 7, 7);    text-shadow: 1px 3px 3px black;}
+  75% {box-shadow: 1px 3px 15px rgb(22, 7, 7);    text-shadow: 1px 3px 3px black;  transform: scale(2.5)}
+ 100% {box-shadow: 0px 0px 0px rgb(22, 7, 7);}
+}
+
+
+
+
+/*ინტრო */
+@keyframes opasityAnime {
+  0% {  
+    opacity: 0;     
+    transform: scale(-5); 
+  }
+
+  20% {   
+       color: green;  
+    left: 50%;
+   /* ეკრანიდან აცდენა ამის ბრალია 80     */
+    opacity: 0.2;
+  }
+
+  40% {
+   /* transform: scale(-1); */
+    color: red; 
+    opacity: 0.4;
+  }
+  
+ 60% { 
+  color: yellow;   
+  opacity: 0.6; 
+  }
+
+  80% { 
+    opacity: 1;
+  }
+}
+/*თამაშის დამთავრება */
+
+#endScreen{
+  position: absolute;
+  width: 100%;
+  height:100%;
+  background-color: red;
+  align-items: center;
+  box-sizing: border-box;
+  border: 5px solid black;
+  display: none;
+  animation: gameEnd 3s forwards;
+  top: 0%;
+}
+
+#adText{
+  top: 0%;
+  position: absolute;
+  color: black;
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+  text-transform: lowercase;
+  font-size: 15px;
+  font-style: italic;
+}
+
+#lvlText {
+  top: 35%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+  text-transform: lowercase;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 60px;
+  color: orange;
+}
+
+#restart {
+  width: 100%;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid white;
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: 35px;
+  font-weight: bolder;
+  font-style: oblique;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 1px 1px 5px rgb(255, 12, 12);
+  color:  hsl(0, 93%, 38%);
+  text-transform: uppercase; 
+  bottom: 5%; 
+  background-color: white;
+}
+
+/*თამაშის მენიუ*/
+#reward {
+  width: 100%;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid white;
+  position: absolute;
+  letter-spacing: 5px;
+  font-size: 35px;
+  font-weight: bolder;
+  font-style: oblique;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 1px 1px 5px rgb(255, 12, 12);
+  color:  hsl(0, 93%, 38%); 
+  top: 5%;
+  text-transform: uppercase;
+  background-color: white;
+
+}
+
+h1 {
+    position: absolute;
+    font-size:45px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+    color: black;
+    top: 40%;
+    width: 100%;
+    box-shadow: inset 0px 0px 10px black;
+    box-shadow: 1px 3px 3px rgb(22, 7, 7);
+}
+
+ 
+
+
+  @keyframes gameEnd {
+    0%    {transform: skeW(10deg) }
+    25%   {transform: skew(180deg)}
+    50%   {rotate:skew(180deg)} 
+    75%   { transform: skew(180deg)}
+    100%  {transform: skew(180deg) }  
+  }
+
+/*განსხვავებული ტაიმერი */
+#rainbow {
+  position: absolute;
+  height: 50px;
+  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  bottom: 0%; 
+  border-radius: 50px 50px 50px 50px;
+  z-index: -100;
+  opacity: 0.6;
+}
+
+@keyframes dift {
+0%{
+  opacity: 1;
+  width: 100%; 
+
+}
+100% {
+  opacity: 0;
+  width: 0%; 
+}
+}

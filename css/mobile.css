@@ -1,0 +1,228 @@
+/* ესაა responsive სიმაღლისთვის და სიგანისთვის */
+@media (max-height: 640px) and (min-width: 360px) {
+}
+
+/* სიმაღლის responsive */
+
+@media (min-height: 850px) {
+  /*სიმაღლის შესანარჩუნებლად background red მიუწეერ და მიხვდები */
+  #lvl-meniu {
+    font-size: 55px;
+    line-height: 100px;
+  }
+  #back {
+    font-size: 45px;
+  }
+  #meniu {
+    font-size: 65px;
+  }
+
+  #restart {
+    font-size: 65px;
+    letter-spacing: 15px;
+    height: 100px;
+  }
+  #reward {
+    font-size: 65px;
+    letter-spacing: 15px;
+    height: 100px;
+  }
+  h1 {
+    font-size: 100px;
+  }
+  #adText {
+    font-size: 25px;
+  }
+}
+
+@media (max-height: 850px) {
+  /*სიმაღლის შესანარჩუნებლად background red მიუწეერ და მიხვდები */
+}
+
+@media (max-height: 650px) {
+  #lvl-meniu {
+    font-size: 18px;
+    line-height: 50px;
+  }
+}
+
+@media (max-height: 570px) {
+  #lvl-meniu {
+    font-size: 15px;
+    line-height: 45px;
+  }
+}
+
+@media (max-height: 450px) {
+  #lvl-meniu {
+    font-size: 15px;
+    line-height: 40px;
+  }
+}
+
+@media (max-height: 330px) {
+  #lvl-meniu {
+    font-size: 12px;
+    line-height: 30px;
+  }
+
+  #meniu {
+    font-size: 25px;
+  }
+}
+
+/*აქედან იწყება ბურთების დაპატარავება */
+@media (max-height: 450px) {
+  /*მარცხენა */
+  #ballleft1 {
+    width: 40px;
+    height: 40px;
+  }
+
+  #ballleft2 {
+    width: 40px;
+    height: 40px;
+  }
+
+  #ballleft3 {
+    width: 40px;
+    height: 40px;
+  }
+
+  #ballleft4 {
+    width: 40px;
+    height: 40px;
+  }
+
+  #ballleft5 {
+    width: 40px;
+    height: 40px;
+  }
+
+  /*მარჯვენა */
+  #ballright1 {
+    width: 40px;
+    height: 40px;
+  }
+  #ballright2 {
+    width: 40px;
+    height: 40px;
+  }
+  #ballright3 {
+    width: 40px;
+    height: 40px;
+  }
+  #ballright4 {
+    width: 40px;
+    height: 40px;
+  }
+  #ballright5 {
+    width: 40px;
+    height: 40px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-height: 450px) {
+  #helping {
+    font-size: 12px;
+  }
+}
+
+@media (max-height: 335px) {
+  /*მარცხენა */
+  #ballleft1 {
+    width: 30px;
+    height: 30px;
+  }
+
+  #ballleft2 {
+    width: 30px;
+    height: 30px;
+  }
+
+  #ballleft3 {
+    width: 30px;
+    height: 30px;
+  }
+
+  #ballleft4 {
+    width: 30px;
+    height: 30px;
+  }
+
+  #ballleft5 {
+    width: 30px;
+    height: 30px;
+  }
+
+  /*მარჯვენა */
+  #ballright1 {
+    width: 30px;
+    height: 30px;
+  }
+  #ballright2 {
+    width: 30px;
+    height: 30px;
+  }
+  #ballright3 {
+    width: 30px;
+    height: 30px;
+  }
+  #ballright4 {
+    width: 30px;
+    height: 30px;
+  }
+  #ballright5 {
+    width: 30px;
+    height: 30px;
+  }
+
+  #level {
+    height: 30px;
+  }
+  #timer {
+    height: 30px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  #restart {
+    font-size: 20px;
+    height: 40px;
+  }
+  #reward {
+    font-size: 20px;
+    height: 40px;
+  }
+  #helping {
+    font-size: 8px;
+  }
+
+  #adText {
+    font-size: 8px;
+  }
+}
+
+@media (max-height: 335px) {
+}
+
+/*width responsive */
+
+/* ესაა თათას ტელესი */
+
+@media (max-width: 360px) {
+  #helping {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 280px) {
+  h1 {
+    font-size: 25px;
+  }
+}
